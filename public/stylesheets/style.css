@@ -1,0 +1,22 @@
+body {
+  margin: 20px !important;
+  width: 600px;
+}
+
+a, button {
+  margin-right: 5px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  margin-top: 6px;
+  padding: 0 !important;
+  font-weight: bold;
+}
+
+.min {
+  width: 40px;
+}

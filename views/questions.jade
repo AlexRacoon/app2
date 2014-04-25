@@ -1,0 +1,12 @@
+table.table
+  tr.active
+    th Опрос
+    th.min
+      a(href='#/questions/new')
+        span.glyphicon.glyphicon-plus
+  tr(ng-disabled='question' ng-repeat='question in questions')
+    td
+      a(href='#/question/{{question._id}}') {{question.question}}
+    td
+      a(href='#/question/{{question._id}}/edit')
+        span.glyphicon.glyphicon-pencil

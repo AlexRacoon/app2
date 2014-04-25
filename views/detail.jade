@@ -1,0 +1,21 @@
+form(name='form')
+  input.form-control(type='text' ng-model='question.question' placeholder='Формулировка' required)
+  br
+
+  table.table
+    tr
+      th Варианты ответов
+      th.min
+        a(href='' ng-click='add()')
+          span.glyphicon.glyphicon-plus
+    tr(ng-repeat='choice in question.choices')
+      td
+        input.form-control(type='text' ng-model='choice.value' placeholder='Ваш вариант' required)
+      td
+        a(href='' ng-click='remove(choice.id)' style='display: block; margin-top: 7px;')
+          span.glyphicon.glyphicon-remove
+
+  div.pull-right
+    a.btn.btn-danger.btn-sm(href='' ng-show='question._id' ng-click='destroy()') Удалить
+    a.btn.btn-primary.btn-sm(href='' ng-click='save()' ng-disabled='form.$invalid') Сохранить
+    a.btn.btn-default.btn-sm(href='#/') К опросам
